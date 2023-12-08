@@ -16,9 +16,10 @@ def home(request):
             "weather_icon": city_weather['weather'][0]['icon'],
         }
         context = {
-                "city": city,
-                "data": data,
+            "city": city,
+            "data": data,
         }
     else:
         data ={}
+        context ={}
     return render(request, 'home.html',context)

@@ -20,12 +20,12 @@
         <div class="container mt-5">
             <div class="row d-flex justify-content-center ">
                 <div class="col-sm-12   ">
-                          <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3>
+                          <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast:</h3>
                             <form action="" method="post">
                                 {% csrf_token %}
 
                                 <div class="input-group rounded mb-3">
-                                    <input type="text" class="form-control" name="city" placeholder="Search" aria-label="Search"
+                                    <input type="text" class="form-control" name="city" placeholder="Enter the city name you want to get weather report on..." aria-label="Search"
                                     aria-describedby="search-addon" />
                                    
                                     <button class="btn btn-default" type="submit">
@@ -44,7 +44,7 @@
                                         <h1>{{city | capfirst}}</h1>
                                         <div id = 'imageContainer'><img src = 'http://openweathermap.org/img/w/{{data.weather_icon}}.png'></div>
                                     </div>
-                                    <h3>Temperature: {{data.weather_temperature}}C</h3>
+                                    <h3>Temperature: {{data.weather_temperature}}</h3>
                                     <h3>Pressure: {{data.weather_pressure}}</h3>
                                     <h3>Humidity: {{data.weather_humidity}}</h3>
                                 </div>
